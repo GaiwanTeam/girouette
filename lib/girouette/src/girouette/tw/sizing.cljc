@@ -61,8 +61,7 @@
                                 "screen-2xl" "1536px"} max-width-fixed-size)
                               (value-unit->css max-width-generic-size
                                                {:zero-unit nil
-                                                :number    {:unit     "rem"
-                                                            :value-fn div-4}
+                                                :number (common/default-number-value-option)
                                                 :fraction  {:unit     "%"
                                                             :value-fn mul-100}}))}))}
 
