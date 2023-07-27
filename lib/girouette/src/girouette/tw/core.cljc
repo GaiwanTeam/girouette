@@ -107,7 +107,8 @@
 
 (defn make-api
   "Creates an API based on a collection of Girouette components."
-  [components {:keys [color-map font-family-map default-number-unit]}]
+  [components {:keys [color-map font-family-map default-number-unit]
+               :or {default-number-unit "px"}}]
   (binding [common/*default-number-unit* default-number-unit]
     (let [components (util/into-one-vector components) ;; flatten the structure
           flattened-color-map (color/flatten-color-map color-map)
